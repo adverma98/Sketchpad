@@ -2,30 +2,31 @@
     margin:auto;
     position:static;
     float:left;
-    height: 20px;
-    width: 20px;
+   /* height: 20px;
+    width: 20px;*/
     border-radius:10px;
     background-color: #2C7CC3;
     clear:all;
-}
+}/*properties of generated grid squares*/
+
 .container {
     margin-top:50%;
     top:50%;
     margin:auto;
-    height:320px;
-    width: 320px;
+    height:832px;
+    width: 832px;
     background-color: white;
-}
+}/*properties of grid container*/
 
 .on{
     background-color: orange;
-}
+}/*properties of triggered grid squares*/
 
 .header{
-  //  margin-top:100px;
     float:top;
     text-align:center;
-}
+}/*heading panel above grid*/
+
 button{
     margin:0px 5px;
     font-size:50px;
@@ -33,15 +34,16 @@ button{
     background-color:white;
     padding:10px 15px;
 }
+
 .reset{
     display:block;
     position:absolute;
     float:bottom;
-}
+}/*RESET button*/
+
 footer{
     position:absolute;
     bottom:250px;
     left:45%;
-    clear:both;
-    
-}
+    clear:both;    
+}/*contains the RESET button*/
