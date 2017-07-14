@@ -9,6 +9,8 @@
     clear:all;
 }
 .container {
+    margin-top:50%;
+    top:50%;
     margin:auto;
     height:320px;
     width: 320px;
@@ -17,4 +19,29 @@
 
 .on{
     background-color: orange;
+}
+
+.header{
+  //  margin-top:100px;
+    float:top;
+    text-align:center;
+}
+button{
+    margin:0px 5px;
+    font-size:50px;
+    color:#845623;
+    background-color:white;
+    padding:10px 15px;
+}
+.reset{
+    display:block;
+    position:absolute;
+    float:bottom;
+}
+footer{
+    position:absolute;
+    bottom:250px;
+    left:45%;
+    clear:both;
+    
 }
