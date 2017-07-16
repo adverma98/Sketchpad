@@ -1,26 +1,26 @@
 var contclick=0;
-var c=0;
-var a=0;
+var gridSize=16;
+
 $(document).ready(function(){
 
-    
+
     makeGrid();
-    a++;
-    console.log("yolo");
-    $(".container").mousedown(colourGrid());
+    $(".container").mousedown(function(){
+	colourGrid();
+    });
+    
     $('.reset').mousedown(function(){
 	makeGrid();
-}
-			 );
+    });
+    
 });
 			     
 function makeGrid(){
 
-	
     $(".container").empty();
 	
-
-    var gridSize = prompt("Size of Sketchpad?(2-100)");   
+   
+    gridSize = prompt("Size of Sketchpad?(2-100)","16");   
 
     var gridSpacing = 100/gridSize;
     
@@ -38,8 +38,6 @@ function makeGrid(){
 }
 
 function colourGrid(){
-    console.log("colour");
-    console.log(c++);
 
     $(".container").mousedown(function(){
 	contclick=1;	
@@ -55,12 +53,7 @@ function colourGrid(){
 }
 
 function clearGrid(){
-    console.log("yolo00");
     $('.square').css("background-color", "lightblue");
 }
 
-
-function test(){
-    console.log(c++);
-}
 
