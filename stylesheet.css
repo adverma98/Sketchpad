@@ -18,17 +18,18 @@
     margin:auto;
     height:500px;
     width: 500px;
-    background-color: white;
+    background-color: teal;
 }/*properties of grid container*/
 
 .on{
-    background-color: orange;
+    background-color: teal;
 }/*properties of triggered grid squares*/
 
 .header{
      background-color:white;
     box-shadow: 0px 0px 10px 2px teal;
     font-family:"Orbitron";
+    font-color:teal;
     float:top;
     text-align:center;
     height:90px;

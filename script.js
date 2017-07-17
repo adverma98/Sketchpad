@@ -3,8 +3,15 @@ var gridSize=16;
 
 $(document).ready(function(){
 
-
     makeGrid();
+    $('#colorChange').click(function(){
+	genRainbow();
+    });
+    
+//    $('#colorChange').data('toggle', !$('#colorChange').data('toggle'));
+
+
+ //   makeGrid();
     $(".container").mousedown(function(){
 	colourGrid();
     });
@@ -18,7 +25,8 @@ $(document).ready(function(){
 function makeGrid(){
 
     $(".container").empty();
-	
+
+    	
    
     gridSize = prompt("Size of Sketchpad?(2-100)","16");   
 
@@ -57,3 +65,22 @@ function clearGrid(){
 }
 
 
+function genRainbow() {
+	    var letters = '0123456789ABCDEF';
+	    var color = '#';
+	    for (var i = 0; i < 6; i++ ) {
+	        color += letters[Math.floor(Math.random() * 16)];
+	    }
+    	$(".rainbow").css({'background-color': color});
+        $(".container").mousedown(function(){
+	contclick=1;	
+    }).mouseup(function(){	
+	contclick=0;	
+    });
+        
+    $(".square").mouseout(function(){
+	if(contclick==1)
+	    $(this).addClass("rainbow");
+    });
+    	$(".rainbow").css({'background-color': color});
+}
