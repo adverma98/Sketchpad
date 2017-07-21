@@ -1,17 +1,12 @@
 var contclick=0;
 var gridSize=16;
 
+
 $(document).ready(function(){
 
     makeGrid();
-    $('#colorChange').click(function(){
-	genRainbow();
-    });
-    
-//    $('#colorChange').data('toggle', !$('#colorChange').data('toggle'));
 
 
- //   makeGrid();
     $(".container").mousedown(function(){
 	colourGrid();
     });
@@ -23,10 +18,8 @@ $(document).ready(function(){
 });
 			     
 function makeGrid(){
-
+   
     $(".container").empty();
-
-    	
    
     gridSize = prompt("Size of Sketchpad?(2-100)","16");   
 
@@ -47,16 +40,57 @@ function makeGrid(){
 
 function colourGrid(){
 
+    var color="teal";
+
+ /*   if(getId('whiteRadio').checked)
+	color="lightblue";
+    else if(getId('rgbRadio').checked)
+	color=randRGB();
+    else if(getId('rainbowRadio').checked)
+	color=randRainbow();*/
+    
+ /*   if(isRainbow){
+    	var letters = '0123456789ABCDEF';
+	     color = '#';
+	    for (var i = 0; i < 6; i++ ) {
+	        color += letters[Math.floor(Math.random() * 16)];
+	    }
+    }*/
+
     $(".container").mousedown(function(){
 	contclick=1;	
     }).mouseup(function(){	
 	contclick=0;	
     });
-        
     $(".square").mouseout(function(){
-	if(contclick==1)
-	    $(this).addClass("on");
+	if(contclick==1){
+	 if(getId('eraserRadio').checked)
+	color="lightblue";
+    else if(getId('redRadio').checked)
+	color='red';
+    else if(getId('blueRadio').checked)
+	color='blue';
+    else if(getId('blackRadio').checked)
+	color='black';
+	    	    
+    else if(getId('greenRadio').checked)
+	color='green';
+    else if(getId('yellowRadio').checked)
+	color='yellow';
+    else if(getId('whiteRadio').checked)
+	color='white';
+    else if(getId('pinkRadio').checked)
+	color='pink';
+    else if(getId('orangeRadio').checked)
+	color='orange';
+    else if(getId('rainbowRadio').checked)
+	color=randRainbow();
+	   // $(this).addClass("on");
+	    $(this).css("background-color", color);
+
+	}
     });
+    
 
 }
 
@@ -65,22 +99,20 @@ function clearGrid(){
 }
 
 
-function genRainbow() {
-	    var letters = '0123456789ABCDEF';
-	    var color = '#';
-	    for (var i = 0; i < 6; i++ ) {
-	        color += letters[Math.floor(Math.random() * 16)];
-	    }
-    	$(".rainbow").css({'background-color': color});
-        $(".container").mousedown(function(){
-	contclick=1;	
-    }).mouseup(function(){	
-	contclick=0;	
-    });
-        
-    $(".square").mouseout(function(){
-	if(contclick==1)
-	    $(this).addClass("rainbow");
-    });
-    	$(".rainbow").css({'background-color': color});
-}
+
+function getId( i) {
+  return document.getElementById(i);
+};
+
+
+function rand( i){
+
+    return Math.floor(Math.random()*i);
+    
+};
+
+function randRainbow(){
+
+    return 'rgb('+rand(255)+','+rand(255)+','+rand(255)+')';
+};
+

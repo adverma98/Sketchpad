@@ -25,18 +25,16 @@
     background-color: teal;
 }/*properties of triggered grid squares*/
 
-.header{
-     background-color:white;
-    box-shadow: 0px 0px 10px 2px teal;
-    font-family:"Orbitron";
-    font-color:teal;
-    float:top;
+.header{position:relative;
+     background-color:pink;
+    box-shadow: 0px 0px 10px 2px #EE6E73;
+    font-family: 'Caesar Dressing', cursive;
+    font-size:30px;
+    top:0px;
     text-align:center;
-    height:90px;
-    width:500px;
+    height:100%;
     margin:auto;
     margin-bottom:20px;
-    margin-top:20px;
 }/*heading panel above grid*/
 
 .reset{
@@ -86,6 +84,7 @@
 .reset:hover span:after {
   opacity: 1;
 }
-body{
+body{margin:0;
     background-color:lightblue;
 }
+html, body { min-height: 100%; }
