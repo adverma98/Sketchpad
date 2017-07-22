@@ -65,7 +65,7 @@ function colourGrid(){
     $(".square").mouseout(function(){
 	if(contclick==1){
 	 if(getId('eraserRadio').checked)
-	color="lightblue";
+	color="#6db4e9e6";
     else if(getId('redRadio').checked)
 	color='red';
     else if(getId('blueRadio').checked)
