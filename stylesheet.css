@@ -20,18 +20,28 @@
     width: 500px;
     background-color: black;
     position: sticky;
-    margin-top: 0px;
+    margin-top: 120px;
 }/*properties of grid container*/
 
 .on{
    
 }/*properties of triggered grid squares*/
 
-.header{position:absolute;
+.linkedin:hover{font-size:43px;
+		color:whitesmoke;}
+.linkedin{
+    color:black;
+    text-decoration:none;
+}
+input[type='radio'] { transform: scale(2); }
+input[type='radio']:hover{color:black;}
+
+.header{
+    position:absolute;
      background-color:#62A2D2;
     box-shadow: 0px 0px 10px 2px #23272D;
-    font-family: 'Caesar Dressing', cursive;
-    font-size:30px;
+    font-family: 'Kranky', cursive;
+    font-size:40px;
     top:0px;
     text-align:center;
     height:10%;
@@ -43,11 +53,10 @@ position: absolute;
 height: 110px;
 float: top;
 list-style-position: inside;
-line-height: 100%;
+line-height: 0px;
 }/*heading panel above grid*/
 
 .reset{
-    font-family:"Orbitron";
     box-shadow: 0px 0px 10px 3px #020202;
     /*! margin:0px 5px; */
     font-size:35px;
@@ -74,12 +83,14 @@ line-height: 100%;
 .reset:hover{
     width:160px;
     height:72px;
-    box-shadow: 0px 0px 10px 2px teal;
+    box-shadow: 0px 0px 10px 5px black;
 }
 .reset span {
   cursor: pointer;
   display: inline-block;
   position: relative;
+  font-size:50px;
+  font-family: 'Caesar Dressing', cursive;
 }
 
 .button span:after {
@@ -90,7 +101,8 @@ line-height: 100%;
 }
 
 .reset:hover span {
-  font-size: 40px;
+    font-size: 52px;
+    color:white;
 }
 
 .reset:hover span:after {
@@ -104,4 +116,66 @@ html, body { min-height: 100%; }
 .styling{
     position:sticky;
     top:200px;
+}
+
+.sidenav {
+    font-family: 'Cabin Sketch', cursive;
+    height: 100%;
+    width: 0;
+    position: fixed;
+    font-size:xx-large;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color:#62A2D2 ;
+    box-shadow:0px 0px 10px 3px black;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover, .offcanvas a:focus{
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    color:black;
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 60px;
+    margin-left: 50px;
+}
+
+@media screen and (max-height: 450px) {
+  .sidenav {padding-top: 15px;}
+  .sidenav a {font-size: 18px;}
+}
+input{
+
+    color:white;
+}
+.options:hover{
+
+    font-size:60px;
+    color:white;
+}
+.options{
+    font-size: 50px;}
+
+a:link {
+    text-decoration: none;
+}
+
+a:visited {
+    text-decoration: none;
 }

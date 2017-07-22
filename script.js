@@ -64,7 +64,7 @@ function colourGrid(){
     });
     $(".square").mouseout(function(){
 	if(contclick==1){
-	 if(getId('eraserRadio').checked)
+    if(getId('eraserRadio').checked)
 	color="#6db4e9e6";
     else if(getId('redRadio').checked)
 	color='red';
@@ -116,3 +116,10 @@ function randRainbow(){
     return 'rgb('+rand(255)+','+rand(255)+','+rand(255)+')';
 };
 
+function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+};
+
+function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+};

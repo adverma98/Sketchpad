@@ -2,7 +2,7 @@
 <html>
   
   <head>
-    <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Archivo+Black|Artifika|Cabin+Sketch|Caesar+Dressing|Calligraffitti|Coming+Soon|Courgette|Exo+2|Henny+Penny|Indie+Flower|Josefin+Sans|Karla|Lobster|Londrina+Sketch|Metal+Mania|Miniver|Permanent+Marker|Raleway|Zilla+Slab" rel="stylesheet"> 
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC|Archivo+Black|Artifika|Cabin+Sketch|Caesar+Dressing|Calligraffitti|Kranky|Fredericka+the+Great|Coming+Soon|Courgette|Exo+2|Henny+Penny|Indie+Flower|Josefin+Sans|Karla|Lobster|Londrina+Sketch|Metal+Mania|Miniver|Permanent+Marker|Raleway|Zilla+Slab" rel="stylesheet"> 
     <title>Adi's Sketchpad</title><!--Tab Title-->
     <link rel='stylesheet' type='text/css' href='stylesheet.css'/>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.8.3/jquery.min.js"></script><!--Scripts and Stylesheets imported-->
@@ -13,13 +13,23 @@
   <body>
 
     <div class="header">
+      <a href="https://www.linkedin.com/in/aditya-verma-b09493135/">
+      <div class="linkedin">
       <h1>ADI'S SKETCHPAD</h1><!--Heading-->
+      </div>
+      </a>
     </div>
+    
+<span class="options" style="font-size:50px;left:12px; cursor:pointer;position:sticky; top:25px;font-family:'Cabin Sketch', cursive;" onclick="openNav()">  &#9776; Options</span>
 
-    <div class="styling">
-      <div id="COLOUR">Colour!</div>
-      <input type="radio" name="colour" id="eraserRadio"> Eraser</input><br>
-      <input type="radio" name="colour" id="rainbowRadio" checked> Rainbow</input><br>
+<div id="mySidenav" class="sidenav">
+      
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+
+  
+
+      <input type="radio" name="colour" id="eraserRadio"><label class="eraser"> Eraser</label></input><br>
+      <input type="radio" name="colour" id="rainbowRadio" checked> RAINBOW</input><br>
       <input type="radio" name="colour" id="blueRadio"> Blue</input><br>   
       <input type="radio" name="colour" id="redRadio"> Red</input><br>
       <input type="radio" name="colour" id="yellowRadio"> Yellow</input><br>
